@@ -1,0 +1,49 @@
+.call {
+  background: $Blue;
+  color: white;
+  padding-top: 4.25rem;
+  padding-bottom: 2.75rem;
+  margin-bottom: clamp(2.5rem, -1.15rem + 7.5vw, 4.25rem);
+
+  @include tablet {
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    @include tablet {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .input,
+  .btn {
+    margin-bottom: 0.625rem;
+  }
+
+  form {
+    margin-left: 2rem;
+    width: min(22.5rem, 100%);
+
+    @include tablet {
+      width: unset;
+      margin-left: unset;
+    }
+  }
+}

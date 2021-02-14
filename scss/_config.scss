@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Semibold.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Bold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Black.otf");
+  font-weight: 700;
+}
+
+$Blue: #008dcd;
+$Light-Blue: #94d1ec;
+$Very-Light-Blue: #d2ecf7;
+$Orange: #ffcc00;
+$Light-Orange: #fce39c;
+$Dark-Gray: #363636;
+$Gray: #b3b3b3;
+$Light-Gray: #e1e1e1;
+$Very-Light-Gray: #f7f7f7;
+$Footer-bg: #e9e9e9;
+$Footer-div: #c4c4c4;
+
+$title-mb: 1.625rem;
+
+%tr {
+  transition: 0.3s ease;
+}
+
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 580px;
+
+@mixin laptop {
+  @media screen and(max-width:$laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and(max-width:$tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and(max-width:$mobile) {
+    @content;
+  }
+}

@@ -1,0 +1,48 @@
+.brands {
+  margin-bottom: 4rem;
+
+  @include tablet {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 4.25rem;
+    align-items: center;
+
+    @include tablet {
+      gap: 1rem;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    place-items: center;
+    justify-content: flex-start;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      column-gap: 1.25rem;
+      place-items: center;
+    }
+
+    img {
+      @include mobile {
+        max-width: 4rem;
+      }
+    }
+
+    & > * + * {
+      margin-left: 1rem;
+
+      @include tablet {
+        margin-left: unset;
+      }
+    }
+  }
+}

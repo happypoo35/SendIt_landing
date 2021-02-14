@@ -1,0 +1,70 @@
+.testimonials {
+  margin-bottom: 4.25rem;
+
+  @include tablet {
+    margin-bottom: 1.75rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+
+    @include tablet {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: clamp(2.5rem, -1.5rem + 8.3vw, 4.25rem);
+    align-items: center;
+
+    @include tablet {
+      gap: 1rem;
+    }
+  }
+
+  .slides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.25rem, -1.7rem + 6vw, 2.5rem);
+
+    @include mobile {
+      overflow: hidden;
+      grid-template-columns: 100% 100%;
+    }
+  }
+
+  .testimonial {
+    @extend %tr;
+
+    @include mobile {
+      &.active {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+    margin-bottom: clamp(0.875rem, -0.85rem + 3.5vw, 1.625rem);
+
+    img {
+      margin-right: clamp(1.25rem, -1.65rem + 6vw, 2.5rem);
+      width: clamp(6.25rem, 13vw, 10rem);
+      height: clamp(6.25rem, 13vw, 10rem);
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-delivery {
+      & > * + * {
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}

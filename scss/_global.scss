@@ -1,0 +1,370 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ----- Helper classes ----- //
+
+.container {
+  width: min(1160px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pad {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include tablet {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+// ----- Typography ----- //
+
+body {
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(black, 0.2);
+    backdrop-filter: blur(4px);
+    display: none;
+  }
+
+  &.active {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &.backdrop {
+    &::before {
+      display: block;
+    }
+  }
+}
+
+h1 {
+  font-size: clamp(2.75rem, 5vw, 3rem);
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  &.call-h {
+    font-size: clamp(1.75rem, -1.2rem + 6vw, 3rem);
+  }
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+
+  &.header-h {
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.intro-h {
+    font-size: 2.25rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+h3 {
+  font-size: clamp(1.625rem, 2.5vw, 1.875rem);
+  font-weight: 500;
+
+  &.guarantee-h,
+  &.footer-h {
+    font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  }
+
+  &.guarantee-h {
+    @include mobile {
+      font-size: 1rem;
+    }
+  }
+}
+
+p {
+  line-height: 1.2;
+
+  &.intro-p {
+    @include tablet {
+      font-size: 0.75rem;
+    }
+  }
+
+  &.step-p {
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+
+    @include tablet {
+      font-size: 0.875rem;
+    }
+  }
+
+  &.user-company {
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+  }
+
+  &.testimonial-p {
+    font-size: clamp(0.875rem, 1.4vw, 1rem);
+
+    @include mobile {
+      font-size: 0.75rem;
+    }
+  }
+
+  &.call-p {
+    font-size: clamp(0.875rem, -0.4rem + 2.5vw, 1.5rem);
+  }
+
+  &.user-name {
+    font-size: clamp(1.625rem, 3vw, 2.25rem);
+  }
+
+  &.feature-p {
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+
+    @include tablet {
+      font-size: 0.625rem;
+    }
+  }
+
+  &.guarantee-p,
+  &.footer-p {
+    font-size: clamp(0.75rem, 1.4vw, 1rem);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: clamp(0.625rem, 1.3vw, 1rem);
+}
+
+a {
+  text-decoration: none;
+  font-size: clamp(0.875rem, 1.4vw, 1.125rem);
+}
+
+// ----- Buttons ----- //
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 0.875rem;
+  width: min(22.5rem, 100%);
+  border-radius: 2rem;
+  background: $Blue;
+  @extend %tr;
+
+  &:hover {
+    box-shadow: 0 0.25rem 1rem rgba($Blue, 0.5);
+  }
+
+  &.orange {
+    background: $Orange;
+    color: $Dark-Gray;
+
+    &:hover {
+      box-shadow: 0 0.25rem 1rem rgba($Orange, 0.5);
+    }
+  }
+}
+
+.slide-btn {
+  background: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  color: $Gray;
+  @extend %tr;
+
+  @include mobile {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &:hover {
+    color: $Blue;
+  }
+
+  &.left {
+    transform: rotate(45deg);
+  }
+
+  &.right {
+    transform: rotate(-135deg);
+  }
+}
+
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: $Blue;
+  border-radius: 50%;
+
+  i {
+    color: white;
+    font-size: 0.625rem;
+  }
+}
+
+// ----- Inputs ----- //
+
+.input {
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  width: min(22.5rem, 100%);
+  border: 1px solid white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  color: white;
+
+  &::placeholder {
+    color: rgba(white, 0.7);
+  }
+
+  &.footer-input {
+    color: $Dark-Gray;
+    border-color: $Dark-Gray;
+
+    &::placeholder {
+      color: rgba($Dark-Gray, 0.7);
+    }
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.625rem;
+  padding-left: 1rem;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      & ~ .checkmark {
+        background: white;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 1px solid white;
+    margin-right: 0.375rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.125rem;
+      bottom: 10%;
+      width: 0.25rem;
+      height: 0.5rem;
+      border: solid $Blue;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+  &.footer-checkbox {
+    color: $Gray;
+
+    input {
+      &:checked {
+        & ~ .checkmark {
+          background: $Blue;
+          border-color: transparent;
+        }
+      }
+    }
+
+    .checkmark {
+      border-color: $Gray;
+
+      &::after {
+        border-color: white;
+      }
+    }
+  }
+}
+
+// ----- Icons ----- //
+
+.feature,
+.guarantee {
+  &-img {
+    width: clamp(6.25rem, 12vw, 10rem);
+    height: clamp(6.25rem, 12vw, 10rem);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: clamp(1rem, -1.4rem + 5vw, 2rem);
+    padding: 1.625rem 1.5rem;
+
+    @include tablet {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,60 @@
+header {
+  background: no-repeat center right 20% / cover url("../images/hero-bg.png");
+  height: clamp(415px, 54vw, 525px);
+  padding-top: 1.875rem;
+  color: white;
+
+  @include tablet {
+    background: no-repeat center right 12% / cover url("../images/hero-bg.png");
+    height: 288px;
+    margin-bottom: 220px;
+  }
+
+  .menu {
+    margin-bottom: clamp(3.375rem, 7vw, 5.5rem);
+  }
+
+  .header-text {
+    max-width: 70%;
+
+    @include tablet {
+      max-width: unset;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 288px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: black;
+      background: white;
+      padding: 1.25rem;
+      text-align: center;
+    }
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    margin-bottom: 1.75rem;
+
+    @include tablet {
+      width: 16rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  h2 {
+    margin-bottom: 2.25rem;
+
+    @include tablet {
+      margin-bottom: 1rem;
+    }
+  }
+}

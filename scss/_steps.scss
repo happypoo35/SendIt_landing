@@ -1,0 +1,51 @@
+.steps {
+  margin-bottom: 3.5rem;
+
+  @include tablet {
+    margin-bottom: 1.75rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 5rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 2rem;
+    }
+  }
+
+  .step {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr 0.5fr;
+    width: min(460px, 100%);
+
+    @include tablet {
+      grid-template-rows: repeat(3, auto);
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      justify-self: flex-end;
+
+      @include tablet {
+        justify-self: unset;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    min-width: 17.5rem;
+  }
+
+  h3 {
+    padding: 2.5rem 0 0.75rem;
+
+    @include tablet {
+      padding: 1rem 0 0.5rem;
+    }
+  }
+}

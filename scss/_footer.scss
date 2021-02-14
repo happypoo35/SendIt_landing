@@ -1,0 +1,103 @@
+.footer {
+  background: $Footer-bg;
+  padding-top: 2rem;
+  padding-bottom: 1.375rem;
+
+  @include tablet {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  &-top {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid $Footer-div;
+    margin-bottom: 1.25rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      text-align: center;
+      place-items: center;
+      padding-bottom: 2.375rem;
+    }
+
+    form {
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .checkbox-container {
+      @include tablet {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        transform: unset;
+        left: unset;
+      }
+    }
+
+    .input {
+      margin-bottom: 0.625rem;
+
+      @include tablet {
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  &-menu {
+    padding-bottom: 1.625rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid $Footer-div;
+
+    .logo {
+      @include tablet {
+        max-width: 8.75rem;
+      }
+    }
+
+    a {
+      color: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social {
+      place-self: center;
+      display: flex;
+
+      @include mobile {
+        display: none;
+      }
+
+      & > * + * {
+        margin-left: clamp(1rem, -1rem + 4vw, 1.75rem);
+      }
+    }
+
+    p:last-child {
+      text-align: right;
+    }
+  }
+}

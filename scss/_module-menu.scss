@@ -1,0 +1,69 @@
+.menu-module {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem 1.25rem 2rem;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  .logo {
+    margin-bottom: 1.25rem;
+    pointer-events: none;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+    & > * + * {
+      margin-top: 1.25rem;
+    }
+
+    a {
+      font-size: 1.125rem;
+      color: black;
+    }
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .input,
+  .btn {
+    margin-bottom: 0.625rem;
+  }
+
+  .social {
+    width: min(22.5rem, 100%);
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      width: 2.25rem;
+      height: 2.25rem;
+
+      i {
+        pointer-events: none;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

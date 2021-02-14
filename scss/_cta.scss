@@ -1,0 +1,35 @@
+.cta {
+  background: $Very-Light-Gray;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include tablet {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    @include tablet {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .btn {
+    margin-left: 2rem;
+
+    @include tablet {
+      margin-left: unset;
+    }
+  }
+}

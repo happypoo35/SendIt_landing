@@ -1,0 +1,95 @@
+.hamburger-container {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 0.5rem;
+    background: white;
+    @extend %tr;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.125rem;
+      border-radius: 0.5rem;
+      background: white;
+    }
+
+    &::before {
+      top: 0.5rem;
+      @extend %tr;
+    }
+
+    &::after {
+      bottom: 0.5rem;
+    }
+  }
+
+  &.active {
+    z-index: 11;
+
+    .hamburger {
+      background: $Dark-Gray;
+      transform: rotate(45deg);
+
+      &::before,
+      &::after {
+        background: $Dark-Gray;
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(90deg);
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+footer .hamburger-container {
+  .hamburger {
+    background: $Dark-Gray;
+
+    &::before,
+    &::after {
+      background: $Dark-Gray;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    max-width: clamp(6.25rem, 13vw, 10rem);
+    position: relative;
+  }
+
+  nav {
+    @include tablet {
+      display: none;
+    }
+
+    & > * + * {
+      margin-left: clamp(1.75rem, -2.2rem + 8vw, 3.75rem);
+    }
+  }
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SendIt Landing Page</title>
+  </head>
+  <body>
+    <div class="menu-module" id="menuModule">
+      <a href="#" id="link">
+        <img src="./images/logo_color.png" alt="SendIt Logo" class="logo" />
+      </a>
+      <nav class="menu-module-nav" id="menu-module-nav">
+        <a href="#" id="link">Главная</a>
+        <a href="#" id="link">Описание</a>
+        <a href="#" id="link">Преимущества</a>
+        <a href="#" id="link">Отзывы</a>
+        <a href="#" id="link">Партнеры</a>
+        <a href="#" id="link">Гарантии</a>
+        <a href="#" id="link">FAQ</a>
+      </nav>
+      <h3 class="menu-module-h uc">Остались вопросы?</h3>
+      <form class="menu-module-form" action="#">
+        <input
+          type="tel"
+          name="phone"
+          class="input footer-input"
+          placeholder="Ваш телефон"
+          autocomplete="off"
+        />
+        <button class="btn">Заказать звонок</button>
+        <label class="checkbox-container footer-checkbox">
+          Я согласен на обработку персональных данных
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+      </form>
+      <div class="social">
+        <a href="#" aria-label="vk" id="link">
+          <i class="fab fa-vk"></i>
+        </a>
+        <a href="#" aria-label="instagram" id="link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="facebook" id="link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="call-module" id="callModule">
+      <div class="close-btn" id="closeBtn">
+        <i class="fas fa-times"></i>
+      </div>
+      <h3>Оставьте заявку, и мы Вам перезвоним!</h3>
+      <form class="call-module-form" action="#">
+        <input
+          type="text"
+          name="name"
+          class="input footer-input"
+          placeholder="Ваше имя"
+          autocomplete="off"
+        />
+        <input
+          type="tel"
+          name="phone"
+          class="input footer-input"
+          placeholder="Ваш телефон"
+          autocomplete="off"
+        />
+        <button class="btn">Заказать звонок</button>
+      </form>
+    </div>
+
+    <header class="pad">
+      <div class="container">
+        <div class="menu header-menu">
+          <a href="index.html" id="link">
+            <img src="./images/logo.png" alt="SendIt Logo" class="logo" />
+          </a>
+          <nav class="header-nav" id="header-nav">
+            <a href="#" id="link">Главная</a>
+            <a href="#" id="link">Описание</a>
+            <a href="#" id="link">Преимущества</a>
+            <a href="#" id="link">Отзывы</a>
+            <a href="#" id="link">Партнеры</a>
+            <a href="#" id="link">Гарантии</a>
+            <a href="#" id="link">FAQ</a>
+          </nav>
+          <div class="hamburger-container" id="hamburgerBtn">
+            <div class="hamburger"></div>
+          </div>
+        </div>
+        <div class="header-text">
+          <h1 class="uc">Придумайте что отправить</h1>
+          <h2 class="header-h">А посылка доедет сама</h2>
+          <button class="btn" id="moduleBtn">Отправить посылку</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="intro pad" aria-label="introduction">
+        <div class="container">
+          <h2 class="intro-h">Мы – агрегатор служб доставки</h2>
+          <div class="intro-text">
+            <p class="intro-p">
+              С нами удобно вам, вашим клиентам и курьерским службам. Для вас
+              наши услуги бесплатны, так как мы получаем бонусы от служб
+              доставок за предоставленный объем заказов, а вы получаете надежный
+              сервис в подарок!
+            </p>
+            <button class="btn" id="moduleBtn">Отправить посылку</button>
+          </div>
+          <img src="./images/illustration-delivery.png" alt="img" />
+        </div>
+      </section>
+      <section class="steps pad" aria-label="steps">
+        <div class="container">
+          <article class="step">
+            <img src="./images/illustration-step-1.png" alt="img" />
+            <h3>Шаг 1</h3>
+            <p class="step-p">Придумайте что и кому отправить</p>
+          </article>
+          <article class="step">
+            <img src="./images/illustration-step-2.png" alt="img" />
+            <h3>Шаг 2</h3>
+            <p class="step-p">
+              Создайте заявку на сайте SendIt - Ваш персональный менеджер
+              позвонит и подтвердит запрос, уточнит все необходимые данные
+            </p>
+          </article>
+          <article class="step">
+            <img src="./images/illustration-step-3.png" alt="img" />
+            <h3>Шаг 3</h3>
+            <p class="step-p">
+              К Вам приезжает курьер, забирает посылку, Вы подписываете один
+              документ
+            </p>
+          </article>
+          <article class="step">
+            <img src="./images/illustration-step-4.png" alt="img" />
+            <h3>Шаг 4</h3>
+            <p class="step-p">
+              Вы ждёте подтверждения доставки, слова радости и благодарности от
+              адресата :)
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="cta pad" aria-label="call to action">
+        <div class="container">
+          <h2>Мы берём все заботы по доставке на себя!</h2>
+          <button class="btn" id="moduleBtn">Отправить посылку</button>
+        </div>
+      </section>
+      <section class="call pad" aria-label="call back">
+        <div class="container">
+          <div class="call-text">
+            <h1 class="call-h uc">Хотите мы вам перезвоним?</h1>
+            <p class="call-p">
+              Закажите звонок, и менеджер вам всё расскажет и объяснит
+            </p>
+          </div>
+          <form action="#">
+            <input
+              type="tel"
+              name="phone"
+              class="input"
+              placeholder="Ваш телефон"
+              autocomplete="off"
+            />
+            <button class="btn orange">Заказать звонок</button>
+            <label class="checkbox-container">
+              Я согласен на обработку персональных данных
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </div>
+      </section>
+      <section class="testimonials pad" aria-label="testimonials">
+        <div class="container">
+          <h2 class="uc">Отзывы</h2>
+          <div class="testimonials-container">
+            <button class="slide-btn left"></button>
+            <div class="slides">
+              <article class="testimonial" aria-label="testimonial">
+                <div class="user">
+                  <img src="./images/user-1.png" alt="img" />
+                  <div class="user-text">
+                    <p class="user-name">Дарья</p>
+                    <p class="user-company">La Intuicion</p>
+                    <ul class="user-delivery">
+                      <li>Посылка: товары</li>
+                      <li>Откуда: Москва</li>
+                      <li>Куда: Нижневартовск</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="testimonial-p">
+                  Отличный и качественный сервис. Долго искали курьерскую службу
+                  для доставки наших товаров. Решили попробовать и были приятно
+                  удивлены, что помимо удобного сайта, компания предоставляет
+                  доступ в личный кабинет, где реализованы многие наши
+                  потребности (ведение адресной базы, выбор и вызов курьера в
+                  пару кликов).
+                </p>
+              </article>
+              <article class="testimonial" aria-label="testimonial">
+                <div class="user">
+                  <img src="./images/user-2.png" alt="img" />
+                  <div class="user-text">
+                    <p class="user-name">Елена</p>
+                    <p class="user-company">Global Logic</p>
+                    <ul class="user-delivery">
+                      <li>Посылка: товары</li>
+                      <li>Откуда: Москва</li>
+                      <li>Куда: Калининград</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="testimonial-p">
+                  Мне нравится работать с SendIt, потому что это удобно:
+                  моментальный расчет стоимости доставки, удобный сайт, выборка
+                  среди основных надёжных логистических компаний и самый
+                  значимый фактор – всё это можно оперативно организовать и не
+                  волноваться. И ещё хочу сказать отдельное спасибо менеджеру за
+                  отзывчивость.
+                </p>
+              </article>
+            </div>
+            <button class="slide-btn right"></button>
+          </div>
+        </div>
+      </section>
+      <section class="features pad" aria-label="features">
+        <div class="container">
+          <h2 class="uc">Наши преимущества</h2>
+          <div class="features-container">
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-1.png" alt="img" />
+              </div>
+              <p class="feature-p">Бесплатный сервис</p>
+            </div>
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-2.png" alt="img" />
+              </div>
+              <p class="feature-p">Огромный выбор вариантов доставки</p>
+            </div>
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-3.png" alt="img" />
+              </div>
+              <p class="feature-p">4 параметра лучшего предложения</p>
+            </div>
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-4.png" alt="img" />
+              </div>
+              <p class="feature-p">Удобство заказа</p>
+            </div>
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-5.png" alt="img" />
+              </div>
+              <p class="feature-p">Online-поддержка</p>
+            </div>
+            <div class="feature">
+              <div class="feature-img">
+                <img src="./images/icon-features-6.png" alt="img" />
+              </div>
+              <p class="feature-p">Единый номер отслеживания</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="guarantees pad" aria-label="guarantees">
+        <div class="container">
+          <h2 class="uc">Наши гарантии</h2>
+          <div class="guarantees-slides">
+            <button class="slide-btn left"></button>
+            <div class="guarantees-container">
+              <article class="guarantee">
+                <div class="guarantee-img">
+                  <img src="./images/icon-guarantee-1.png" alt="img" />
+                </div>
+                <h3 class="guarantee-h">Страховка отправлений</h3>
+                <p class="guarantee-p">
+                  Контроль работы курьеров в онлайн режиме. Страхование по
+                  запросу клиента Каждый куръер находится под пристальным
+                  вниманием менеджеров SendIt
+                </p>
+                <button class="btn">Подробнее</button>
+              </article>
+              <article class="guarantee">
+                <div class="guarantee-img">
+                  <img src="./images/icon-guarantee-2.png" alt="img" />
+                </div>
+                <h3 class="guarantee-h">Прозрачность расчетов</h3>
+                <p class="guarantee-p">
+                  Чтобы узнать точную стоимость отправления вам не нужно
+                  связываться с каждой курьерской службой в отдельности и
+                  сравнивать полученные предложения, просто воспользуйтесь нашим
+                  сервисом
+                </p>
+                <button class="btn">Подробнее</button>
+              </article>
+              <article class="guarantee">
+                <div class="guarantee-img">
+                  <img src="./images/icon-guarantee-3.png" alt="img" />
+                </div>
+                <h3 class="guarantee-h">Лучшие поставщики</h3>
+                <p class="guarantee-p">
+                  Мы работаем с самыми надежными и известными операторами
+                  доставки. Проверка надежности курьерской компании, экспертная
+                  оценка качества предоставляемых услуг
+                </p>
+                <button class="btn">Подробнее</button>
+              </article>
+            </div>
+            <button class="slide-btn right"></button>
+          </div>
+        </div>
+      </section>
+      <section class="accordion pad" aria-label="FAQ">
+        <div class="container">
+          <h2 class="uc">Остались сомнения?</h2>
+          <div class="accordion-container">
+            <div class="col">
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>
+                    На бумажную волокиту уйдёт много времени, а мне нужно
+                    доставить срочно!
+                  </p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>
+                    Мне необходимо совершить доставку по нескольким адресам,
+                    нужно много чего заполнять
+                  </p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>Вы не сможете доставить посылку за границу</p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>Вы не занимаетесь такими простыми грузами, как мебель</p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>
+                    Я отправляю вместе с коллегами, мы можем легко запутаться
+                    где чьё
+                  </p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+              <article class="accordion-item">
+                <div class="item-question">
+                  <p>Нужно заполнять кучу документов</p>
+                  <button class="accordion-btn">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="item-answer">
+                  <p>
+                    Это не так. Вам нужно заполнить и подписать всего один
+                    документ, который распространяется на все службы доставки,
+                    которые будут доставлять вашу посылку
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brands pad" aria-label="brands">
+        <div class="container">
+          <button class="slide-btn left"></button>
+          <div class="brands-container">
+            <img src="./images/icon-delivery-1.png" alt="brand" />
+            <img src="./images/icon-delivery-2.png" alt="brand" />
+            <img src="./images/icon-delivery-3.png" alt="brand" />
+            <img src="./images/icon-delivery-4.png" alt="brand" />
+            <img src="./images/icon-delivery-5.png" alt="brand" />
+            <img src="./images/icon-delivery-6.png" alt="brand" />
+            <img src="./images/icon-delivery-7.png" alt="brand" />
+            <img src="./images/icon-delivery-8.png" alt="brand" />
+          </div>
+          <button class="slide-btn right"></button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer pad">
+      <div class="container">
+        <div class="footer-top">
+          <h3 class="footer-h uc">Остались вопросы?</h3>
+          <form action="#">
+            <div class="col">
+              <input
+                type="tel"
+                name="phone"
+                class="input footer-input"
+                placeholder="Ваш телефон"
+                autocomplete="off"
+              />
+              <label class="checkbox-container footer-checkbox">
+                Я согласен на обработку персональных данных
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </form>
+          <button class="btn">Заказать звонок</button>
+        </div>
+        <div class="menu footer-menu">
+          <a href="index.html" id="link">
+            <img src="./images/logo_color.png" alt="SendIt Logo" class="logo" />
+          </a>
+          <nav class="footer-nav" id="footer-nav">
+            <a href="#" id="link">Главная</a>
+            <a href="#" id="link">Описание</a>
+            <a href="#" id="link">Преимущества</a>
+            <a href="#" id="link">Отзывы</a>
+            <a href="#" id="link">Партнеры</a>
+            <a href="#" id="link">Гарантии</a>
+            <a href="#" id="link">FAQ</a>
+          </nav>
+          <div class="hamburger-container">
+            <div class="hamburger"></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-p">©2021 sendit.com</p>
+          <div class="social">
+            <a href="#" aria-label="vk" id="link">
+              <i class="fab fa-vk"></i>
+            </a>
+            <a href="#" aria-label="instagram" id="link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="facebook" id="link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+          <p class="footer-p">Designed by</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/App.js"></script>
+</html>

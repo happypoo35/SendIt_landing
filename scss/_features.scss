@@ -1,0 +1,43 @@
+.features {
+  background: $Very-Light-Gray;
+  padding-top: clamp(2.25rem, -7.5rem + 20vw, 6.25rem);
+  padding-bottom: clamp(2.25rem, -7.5rem + 20vw, 6.25rem);
+  margin-bottom: clamp(2.5rem, -3.6rem + 12.5vw, 5rem);
+
+  @include tablet {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.625rem;
+  }
+
+  h2 {
+    margin-bottom: $title-mb;
+
+    @include tablet {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: clamp(1.25rem, -1.65rem + 6vw, 2.5rem);
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+      gap: 1.5rem 0.625rem;
+    }
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: clamp(6.25rem, 12vw, 10rem);
+
+    &-img {
+      background: white;
+    }
+  }
+}
